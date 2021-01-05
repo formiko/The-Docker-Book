@@ -77,10 +77,9 @@ sudo docker run -i -t ubuntu /bin/bash
     sudo docker attach aa3f365f0f4e
     ```
 ## 3.7 创建守护式容器
-*
-    ```
-    sudo docker run --name daemon_dave -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
-    ```
+```
+sudo docker run --name daemon_dave -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
+```
 ## 3.8 容器内部都在干些什么
 * 获取守护式容器的日志
     ```
@@ -103,23 +102,23 @@ sudo docker run -i -t ubuntu /bin/bash
     sudo docker logs -ft daemon_dave
     ```
 ## 3.9 Docker日志驱动
- ```
- sudo docker run --log-driver="syslog" --name daemon_dwayne -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
- ```
- ## 3.10 查看容器内的进程
- ```
- sudo docker top daemon_dave
- ```
- ## 3.11 Docker统计信息
- ```
- sudo docker stats daemon_dave daemon_kate daemon_clare daemon_sarah
- ```
- ## 3.12 在容器内部运行进程
- * 在容器中运行后台任务
+```
+sudo docker run --log-driver="syslog" --name daemon_dwayne -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
+```
+## 3.10 查看容器内的进程
+```
+sudo docker top daemon_dave
+```
+## 3.11 Docker统计信息
+```
+sudo docker stats daemon_dave daemon_kate daemon_clare daemon_sarah
+```
+## 3.12 在容器内部运行进程
+* 在容器中运行后台任务
     ```
     sudo docker exec -d daemon_dave touch /etc/new_config_file
     ```
-  从Docker 1.7 开始，可以对docker exec启动的进程使用-u标识为新启动的进程指定一个用户属主。
+从Docker 1.7 开始，可以对docker exec启动的进程使用-u标识为新启动的进程指定一个用户属主。
 * 在容器内运行交互命令
     ```
     sudo docker exec -t -i daemon_dave /bin/bash
