@@ -74,7 +74,7 @@ sudo docker run -i -t ubuntu /bin/bash
     ```
 * 通过ID附着到正在运行的容器
     ```
-    sudo docker run aa3f365f0f4e
+    sudo docker attach aa3f365f0f4e
     ```
 ## 3.7 创建守护式容器
     ```
