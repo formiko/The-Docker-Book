@@ -118,7 +118,7 @@ sudo docker stats daemon_dave daemon_kate daemon_clare daemon_sarah
     ```
     sudo docker exec -d daemon_dave touch /etc/new_config_file
     ```
-从Docker 1.7 开始，可以对docker exec启动的进程使用-u标识为新启动的进程指定一个用户属主。
+  从Docker 1.7 开始，可以对docker exec启动的进程使用-u标识为新启动的进程指定一个用户属主。
 * 在容器内运行交互命令
     ```
     sudo docker exec -t -i daemon_dave /bin/bash
