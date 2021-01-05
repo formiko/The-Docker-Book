@@ -77,6 +77,7 @@ sudo docker run -i -t ubuntu /bin/bash
     sudo docker attach aa3f365f0f4e
     ```
 ## 3.7 创建守护式容器
+*
     ```
     sudo docker run --name daemon_dave -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
     ```
